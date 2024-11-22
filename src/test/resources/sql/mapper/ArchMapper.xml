@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.plaf.dataauth.mapper.ArchDao">
+    <resultMap id="archMap" type="cn.plaf.dataauth.mapper.ArchDO">
+        <id property="archNo" column="ARCH_NO"/>
+        <result property="archName" column="ARCH_NAME"/>
+        <result property="deptId" column="dept_Id"/>
+        <result property="crter" column="crter"/>
+        <result property="poolarea" column="poolarea"/>
+    </resultMap>
+
+    <select id="getArchList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>
+    
+    <select id="getAreaSqlList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>  
+    <!-- CUSTOM_SQL -->  
+    <select id="getCustomSqlList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>  
+    <!-- EXISTS_SQL -->  
+    <select id="getExistsSqlList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>  
+    <!-- DEPT_SQL -->  
+    <select id="getDeptSqlList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>  
+    <!-- DEPT_AND_CHILD_SQL -->  
+    <select id="getDeptAndChildSqlList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>  
+    <!-- SELF_SQL -->  
+    <select id="getSelfSqlList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>  
+    <!-- FULL_MATCH_SQL -->  
+    <select id="getFullMatchSqlList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>  
+    <!-- CONTAIN_MATCH_SQL -->  
+    <select id="getContainMatchSqlList"  resultMap="archMap" >
+        SELECT
+        A.ARCH_NO,A.ARCH_NAME,A.DEPT_ID,A.CRTER,A.POOLAREA
+        FROM ARCH_B A WHERE 1=1 
+       <!-- 档案名称 -->
+	    <if test="archDTO.archName != null and  archDTO.archName != ''">
+			AND A.ARCH_NAME like  concat('%',#{archDTO.archName},'%')
+		</if>
+	    <if test="archDTO.deptIds != null and  archDTO.deptIds.size()>0 ">
+			AND A.DEPT_ID 
+            <foreach collection="archDTO.deptIds" item="item" open=" in (" close="  )  " separator=",">
+                #{item}  
+            </foreach>
+		</if>
+    </select>  
+    
+</mapper>
