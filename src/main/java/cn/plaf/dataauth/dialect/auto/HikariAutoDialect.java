@@ -5,7 +5,7 @@ import com.zaxxer.hikari.HikariDataSource;
 /**
  * Hikari
  *
- * @author liuzh
+ * @author gerryluo
  */
 public class HikariAutoDialect extends DataSourceAutoDialect<HikariDataSource> {
 

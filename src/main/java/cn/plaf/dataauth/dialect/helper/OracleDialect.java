@@ -20,7 +20,7 @@ import net.sf.jsqlparser.statement.select.Select;
 
 /**
  * @description 组装sql 
- * @author luoboy
+ * @author gerryluo
  *
  */
 public class OracleDialect extends AbstractHelperDialect{

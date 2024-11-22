@@ -1,11 +1,4 @@
-package cn.plaf.dataauth.util;/**
- * @Package cn.plaf.dataauth.util
- * @Title:
- * @Description: (用一句话描述该文件做什么)
- * @author luoboy
- * @date 2023/8/3 10:47
- * @version V1.0
- */
+package cn.plaf.dataauth.util;
 
 import java.lang.reflect.Array;
 import java.util.Collection;

@@ -5,7 +5,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 /**
  * Druid
  *
- * @author liuzh
+ * @author gerryluo
  */
 public class DruidAutoDialect extends DataSourceAutoDialect<DruidDataSource> {
 

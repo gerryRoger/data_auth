@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * @author luoboy
+ * @author gerryluo
  * @description 数据权限拦截器
  * @date 2022/3/13
  */

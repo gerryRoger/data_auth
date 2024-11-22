@@ -31,7 +31,7 @@ import cn.plaf.dataauth.Dialect;
 /**
  * 基于 CountSqlParser 的智能 Count 查询
  *
- * @author liuzh
+ * @author gerryluo
  */
 public abstract class AbstractDialect implements Dialect {
     //处理SQL

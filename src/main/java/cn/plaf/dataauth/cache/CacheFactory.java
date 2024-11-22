@@ -34,7 +34,7 @@ import cn.plaf.dataauth.util.StringUtil;
 /**
  * CacheFactory
  *
- * @author liuzh
+ * @author gerryluo
  */
 public abstract class CacheFactory {
 

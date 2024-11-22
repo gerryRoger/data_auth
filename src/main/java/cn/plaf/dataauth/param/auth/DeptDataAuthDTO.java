@@ -4,8 +4,7 @@ package cn.plaf.dataauth.param.auth;
  * @Package cn.plaf.dataauth.param
  * @Title:
  * @Description: 部门权限
- * @author luoboy
- * @date 2023/7/25 9:18
+ * @author gerryluo
  * @version V1.0
  */
 

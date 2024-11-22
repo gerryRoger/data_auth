@@ -132,3 +132,4 @@ insert into sys_role_dept(id,role_id,dept_id) values('7','3','7');
 insert into sys_role_dept(id,role_id,dept_id) values('8','3','8');
 insert into sys_role_dept(id,role_id,dept_id) values('9','2','3');
 insert into sys_role_dept(id,role_id,dept_id) values('10','3','7');
+

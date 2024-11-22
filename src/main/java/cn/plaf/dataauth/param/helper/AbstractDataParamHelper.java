@@ -10,7 +10,7 @@ import cn.plaf.dataauth.param.DataParamHelper;
 
 /**
  * 数据传值
- * @author luoboy
+ * @author gerryluo
  *
  */
 public abstract class AbstractDataParamHelper implements DataParamHelper {

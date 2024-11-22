@@ -31,7 +31,7 @@ import cn.plaf.dataauth.PageException;
 import java.lang.reflect.Method;
 
 /**
- * @author liuzh
+ * @author gerryluo
  */
 public class MetaObjectUtil {
     public static Method method;

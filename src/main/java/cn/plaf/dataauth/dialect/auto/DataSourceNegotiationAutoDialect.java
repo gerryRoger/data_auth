@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 
  *
- * @author liuzh
+ * @author gerryluo
  */
 public class DataSourceNegotiationAutoDialect implements AutoDialect<String> {
     private static final List<DataSourceAutoDialect> AUTO_DIALECTS = new ArrayList<DataSourceAutoDialect>();

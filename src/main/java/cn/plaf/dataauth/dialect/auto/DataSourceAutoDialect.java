@@ -14,7 +14,7 @@ import java.util.Properties;
 /**
  * 使用 Hikari 连接池时，简单获取jdbcUrl
  *
- * @author liuzh
+ * @author gerryluo
  */
 public abstract class DataSourceAutoDialect<Ds extends DataSource> implements AutoDialect<String> {
     protected Class dataSourceClass;

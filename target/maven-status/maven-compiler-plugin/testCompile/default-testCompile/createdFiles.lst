@@ -1,0 +1,9 @@
+cn\plaf\dataauth\mapper\ArchDao.class
+cn\plaf\dataauth\mapper\ArchDO.class
+cn\plaf\dataauth\util\ClassScanner.class
+cn\plaf\dataauth\util\MybatisInterceptorHelper.class
+cn\plaf\dataauth\util\TestUtil.class
+cn\plaf\dataauth\main\TestDataAuthMain.class
+cn\plaf\dataauth\param\helper\DataParamBuilder.class
+cn\plaf\dataauth\util\MybatisPlusInterceptorHelper.class
+cn\plaf\dataauth\util\ClassScanner$1.class

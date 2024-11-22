@@ -5,7 +5,7 @@ import org.apache.tomcat.jdbc.pool.DataSource;
 /**
  * tomcat-jdbc
  *
- * @author liuzh
+ * @author gerryluo
  */
 public class TomcatAutoDialect extends DataSourceAutoDialect<DataSource> {
 

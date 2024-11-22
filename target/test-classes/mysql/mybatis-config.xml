@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2014-2017 abel533@gmail.com
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <setting name="aggressiveLazyLoading" value="true"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <typeAliases>
+        <package name="cn.plaf.dataauth.mapper"/>
+    </typeAliases>
+
+    <plugins>
+
+        <plugin interceptor="cn.plaf.dataauth.config.DataAuthInterceptor">
+            <!-- 支持通过Mapper接口参数来传递分页参数 -->
+            <property name="helperDialect" value="mysql"/>
+            <property name="defaultDataParam" value="cn.plaf.dataauth.param.helper.DataParamBuilder"/>
+            <!-- 创建用户字段名称 -->
+            <property name="userIdColumn" value="crter"/>
+            <!-- 统筹区字段名称 -->
+            <property name="areaColumn" value="poolarea"/>
+            <!-- 部门id字段名称 -->
+            <property name="deptIdColumn" value="dept_id"/>
+            <!-- 上级部门id字段名称 -->
+            <property name="deptUpIdColumn" value="dept_up_id"/>
+            <!-- 角色id字段名称 -->
+            <property name="roleIdColumn" value="role_id"/>
+            <!-- 完全匹配字段名称 -->
+            <property name="fullMatchColumn" value="poolarea"/>
+            <!-- 包含匹配创建用户字段名称 -->
+            <property name="containMatchColumn" value="poolarea,crter"/>
+            <!-- 部门表名称 -->
+            <property name="sysDeptTableName" value="sys_dept"/>
+            <!-- 角色部门表名称 -->
+            <property name="sysRoleDeptTableName" value="sys_role_dept"/>
+            <!-- 包含方法列表 -->
+            <property name="dataAuthInterceptMethods" value="cn.plaf.dataauth"/>
+            <!-- 过滤方法列表-->
+            <property name="dataAuthExtMethods" value="cn.plaf.dataauth1"/>
+            <!-- 数据权限过滤开关 true 打开 false 关闭 -->
+            <property name="dataAuthFlag" value="true"/>
+        </plugin>
+        <!--  -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="helperDialect" value="mysql"/>
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC">
+                <property name="" value=""/>
+            </transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/data_auth?connectTimeout=1000&amp;socketTimeout=3000&amp;amp;autoReconnect=true&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=GMT%2B8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="sql/mapper/ArchMapper.xml"/>
+    </mappers>
+
+</configuration>

@@ -4,8 +4,7 @@ package cn.plaf.dataauth.param.auth;
  * @Package cn.plaf.dataauth.param
  * @Title:
  * @Description:用户自定义数据
- * @author luoboy
- * @date 2023/7/25 9:10
+ * @author gerryluo
  * @version V1.0
  */
 public class CustomDataAuthDTO extends DataAuthDTO {

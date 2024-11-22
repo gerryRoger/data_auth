@@ -5,7 +5,7 @@ import org.apache.commons.dbcp2.BasicDataSource;
 /**
  * commons-dbcp
  *
- * @author liuzh
+ * @author gerryluo
  */
 public class DbcpAutoDialect extends DataSourceAutoDialect<BasicDataSource> {
 

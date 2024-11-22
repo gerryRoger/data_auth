@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * 外部传参接口
- * @author luoboy
+ * @author gerryluo
  *
  */
 public interface DataParamHelper {

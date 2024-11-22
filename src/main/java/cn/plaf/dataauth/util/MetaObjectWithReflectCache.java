@@ -37,7 +37,7 @@ import cn.plaf.dataauth.PageException;
 /**
  * 反射带缓存，提高反射性能
  *
- * @author liuzh
+ * @author gerryluo
  */
 public class MetaObjectWithReflectCache {
     public static final ObjectFactory DEFAULT_OBJECT_FACTORY = new DefaultObjectFactory();

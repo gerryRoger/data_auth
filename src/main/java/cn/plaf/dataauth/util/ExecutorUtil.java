@@ -46,7 +46,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author liuzenghui
+ * @author gerryluo
  */
 public abstract class ExecutorUtil {
 
